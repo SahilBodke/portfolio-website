@@ -1,0 +1,100 @@
+/* Media Queries for Responsiveness */
+
+@media screen and (max-width: 1200px) {
+
+    /* Adjusting box layout for experience section */
+    .secondSection .box {
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+        align-items: center;
+        background: none; /* Hide horizontal line on mobile */
+    }
+
+    .secondSection .vertical {
+        height: auto;
+        margin: 40px 0; /* Add vertical space between items */
+        width: 80vw;
+        padding-bottom: 20px;
+        border-bottom: 2px solid white; /* Use bottom border as separator */
+    }
+
+    .secondSection .vertical:last-child {
+        border-bottom: none; /* Remove border from last item */
+    }
+    
+    .secondSection {
+        height: auto; /* Allow height to grow with content */
+    }
+
+    .image-top {
+        top: 0; /* Reset position */
+    }
+
+    .vertical-title, .vertical-desc {
+        left: 50px; /* Align text next to the image */
+        top: -30px;
+    }
+
+    .vertical-desc {
+        top: -20px;
+    }
+
+    /* Adjust main sections for stacking */
+    .firstSection {
+        flex-direction: column-reverse;
+        margin: 50px 0;
+    }
+
+    .firstSection > div {
+        width: 80%;
+    }
+    
+    .leftSection {
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    .rightSection img {
+        width: 70%;
+        margin-bottom: 20px;
+    }
+
+    .leftSection .buttons {
+        text-align: center;
+    }
+
+    /* Adjust navigation and footer */
+    nav {
+        flex-direction: column;
+        height: auto;
+        padding: 20px 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 15px;
+    }
+
+    nav ul li {
+        margin: 8px 0;
+    }
+    
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .footer > div {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    /* Adjust horizontal rule */
+    main hr {
+        margin: 40px 20px;
+    }
+}

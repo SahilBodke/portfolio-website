@@ -1,0 +1,159 @@
+/* Define color variables with gradients */
+:root {
+    /* UPDATED: Brighter Black and Cyan Theme */
+    --primary-gradient-start: #101418;
+    --primary-gradient-end: #0A0A0A;
+    --secondary-gradient-start: #161B22;
+    --secondary-gradient-end: #101418;
+    --footer-gradient-start: #101418;
+    --footer-gradient-end: #0A0A0A;
+    --card-gradient-start: #161B22;
+    --card-gradient-end: #101418;
+    --accent-color: #29F8FF; /* Brighter cyan */
+    --hr-color: rgba(41, 248, 255, 0.25); /* Cyan border color */
+}
+
+body {
+    background-color: var(--primary-gradient-end);
+    /* UPDATED: Reduced the cyan color in the gradient for a more subtle effect */
+    background-image: radial-gradient(circle at bottom right, rgba(41, 248, 255, 0.07), var(--primary-gradient-start) 5%, var(--primary-gradient-end) 100%);
+    background-attachment: fixed;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Custom Navigation Bar Style */
+.custom-nav {
+    background-color: var(--secondary-gradient-end);
+    background-image: linear-gradient(to right, var(--secondary-gradient-start), var(--secondary-gradient-end));
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Make nav links cyan on hover */
+.nav-link:hover, .nav-link.active {
+    color: var(--accent-color) !important;
+}
+
+/* Custom color for specific text */
+.text-cyan {
+    color: var(--accent-color);
+}
+
+/* Make Typed.js element stand out */
+#element {
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+/* Custom Horizontal Rule */
+.custom-hr {
+    border: 0;
+    background: var(--hr-color);
+    height: 1px;
+    margin: 4rem auto;
+    width: 80%;
+}
+
+/* Homepage Hero Buttons */
+.firstSection .btn-outline-light:hover {
+    color: black;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 10px rgba(41, 248, 255, 0.3);
+}
+
+
+/* Experience Section Card Styling (Homepage) */
+.experience-card {
+    background-color: var(--card-gradient-end);
+    background-image: linear-gradient(to top left, var(--card-gradient-start), var(--card-gradient-end));
+    border: 1px solid var(--hr-color);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.experience-card:hover {
+    transform: translateY(-5px);
+    /* UPDATED: Box shadow to match brighter cyan accent */
+    box-shadow: 0 4px 15px rgba(41, 248, 255, 0.15);
+}
+
+.experience-img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Project Card Styling (Projects Page) */
+.project-card {
+    background-color: var(--card-gradient-end);
+    border: 1px solid var(--hr-color);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    /* UPDATED: Box shadow to match brighter cyan accent */
+    box-shadow: 0 4px 20px rgba(41, 248, 255, 0.2);
+}
+
+.project-card .btn-primary, .contact-section .btn-primary {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: var(--primary-gradient-end);
+    font-weight: 600;
+}
+
+.project-card .btn-primary:hover, .contact-section .btn-primary:hover {
+    background-color: #12F7D6;
+    border-color: #12F7D6;
+}
+
+/* About Page Profile Image Styling */
+.profile-image-container {
+    position: relative;
+    max-width: 400px; /* Control the max size */
+}
+
+.profile-image {
+    border-radius: 8px; /* Soft rounded corners for a classic photo look */
+    width: 100%;
+    border: 2px solid var(--hr-color); /* Added subtle cyan border */
+}
+
+/* Contact Page Form Styling - NEW */
+.form-control {
+    background-color: #161B22;
+    border: 1px solid var(--hr-color);
+    color: white;
+}
+
+.form-control:focus {
+    background-color: #161B22;
+    border-color: var(--accent-color);
+    color: white;
+    box-shadow: 0 0 10px rgba(41, 248, 255, 0.3);
+}
+
+
+.hero-lottie {
+    width: 100%;
+    max-width: 560px; /* tune to your layout */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* ensure hero layout remains nice on small screens */
+@media (max-width: 992px) {
+    .hero-lottie { max-width: 420px; }
+}
+@media (max-width: 576px) {
+    .hero-lottie { max-width: 320px; }
+}
+
+/* Footer Styling */
+.footer-bg {
+    background-color: var(--footer-gradient-end);
+    background-image: linear-gradient(to right, var(--footer-gradient-start), var(--footer-gradient-end));
+}
